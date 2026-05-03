@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardioVision | Assessment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <nav class="navbar">
+    <div class="nav-container">
+        <div class="logo"><img src="images/logo4.jpeg" alt="CardioVision Logo" style="width: 50px; height: 50px;">Cardio<span>Vision</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                About</a></li>
+            <li><a href="how-it-works.html">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                How It Works</a></li>
+            <li><a href="health-tips.html">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/></svg>
+                Health Tips</a></li>
+                <li>
+    <a href="faq.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+        <span>FAQ</span>
+    </a>
+</li>
+        </ul>
+    </div>
+</nav>
+
+       <section id="assessment-view" class="section">
+        <div class="container">
+            <button class="btn-back" onclick="showHome()">← Back to Home</button>
+            <div id="assessment-heading" style="text-align: center; margin-bottom: 25px;">
+        <h1 style="font-size: 2rem; color: var(--text-dark); margin-bottom: 5px;">Health Assessment</h1>
+        <p style="color: #666;">Complete the steps below for your report</p>
+    </div>
+           <form class="assessment-card" id="multiStepForm">
+                <div class="progbar-container">
+                    <div class="progbar-item current" id="pb-item-1">
+                        <div class="progbar-circle">1</div>
+                        <span class="progbar-text">Personal</span>
+                    </div>
+                    <div class="progbar-line"></div>
+                    <div class="progbar-item" id="pb-item-2">
+                        <div class="progbar-circle">2</div>
+                        <span class="progbar-text">Vitals</span>
+                    </div>
+                    <div class="progbar-line"></div>
+                    <div class="progbar-item" id="pb-item-3">
+                        <div class="progbar-circle">3</div>
+                        <span class="progbar-text">Lifestyle</span>
+                    </div>
+                </div>
+
+                <div class="form-step active" id="step1">
+                    <h2>Personal Information</h2>
+                    <p class="subtitle">Tell us about yourself</p>
+                    <div class="form-group">
+    <label>Name</label>
+    <div class="input-with-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+        </svg>
+   <input type="text" id="userName" placeholder="Enter your name" required>
+    </div>
+</div>
+                   <div class="form-group">
+    <label>Age</label>
+    <div class="input-with-icon">
+       
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
+<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+<line x1="16" y1="2" x2="16" y2="6"></line>
+<line x1="8" y1="2" x2="8" y2="6"></line>
+<line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+        <input type="number" id="userAge" placeholder="e.g., 45">
+    </div>
+</div>
+                    <div class="form-group">
+    <label>Gender</label>
+    <div class="gender-selection">
+        <label class="gender-option">
+            <input type="radio" name="gender" value="male" id="male" checked>
+            <div class="gender-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0"/><path d="M16.5 7.5L21 3"/><path d="M15 3h6v6"/></svg>
+                <span>Male</span>
+            </div>
+        </label>
+        
+        <label class="gender-option">
+            <input type="radio" name="gender" value="female" id="female">
+            <div class="gender-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0"/><path d="M12 19v3"/><path d="M9 21h6"/></svg>
+                <span>Female</span>
+            </div>
+        </label>
+    </div>
+</div>
+                    <div class="form-btns-fixed">
+                        <button type="button" class="btn-prev" disabled>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.5 12h-16m0 0l6.07 6.07M3.5 12l6.07-6.07" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Previous
+                        </button>
+                        <button type="button" class="btn-next-blue" onclick="nextStep(2)">
+                            Next
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <h2>Health Vitals</h2>
+                    <p class="subtitle">Enter your key health numbers</p>
+                    <div class="form-group">
+    <label>Systolic Blood Pressure (mmHg)</label>
+    <div class="input-with-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
+<path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0s-1.5 4 0 5.5L12 21l8.8-10.9c1.5-1.5 1.5-4 0-5.5z"/>
+<polyline points="3 12 7 12 9 9 11 15 13 12 17 12"/>
+</svg>
+        <input type="number" id="userBP" placeholder="e.g., 120">
+    </div>
+     <small>Normal: ~120 | High: 140+</small>
+</div>
+                    <div class="form-group">
+    <label>Total Cholesterol (mg/dL)</label>
+    <div class="input-with-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
+<path d="M12 2C12 2 6 10 6 14a6 6 0 0 0 12 0c0-4-6-12-6-12z"/>
+</svg>
+        <input type="number" id="userChol" placeholder="e.g., 200">
+       </div>
+     <small>Desirable: <200 | High: 240+</small>
+</div>
+                  <div class="form-group">
+    <label>BMI (Body Mass Index)</label>
+    <div class="input-with-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
+<rect x="4" y="4" width="16" height="16" rx="3"/>
+<circle cx="12" cy="10" r="2"/>
+<line x1="12" y1="10" x2="16" y2="7"/>
+</svg>
+        <input type="number" step="0.1" id="userBMI" placeholder="e.g., 24.5">
+    </div>
+    <small>Normal: 18.5-24.9 | Overweight: 25-29.9 | Obese: 30+</small>
+</div>
+                    
+                    <div class="form-btns-fixed">
+                        <button type="button" class="btn-prev" onclick="nextStep(1)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.5 12h-16m0 0l6.07 6.07M3.5 12l6.07-6.07" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Previous
+                        </button>
+                        <button type="button" class="btn-next-blue" onclick="nextStep(3)">
+                            Next
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <h2>Lifestyle & History</h2>
+                    <p class="subtitle">A few more details for accurate analysis</p>
+                    <div class="form-group">
+    <label>Physical Activity Level</label>
+
+    <div class="input-with-icon">
+
+        <!-- Activity Icon -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="input-icon">
+            <circle cx="13" cy="4" r="2"/>
+            <path d="M9 22l3-6 2 2 4-4"/>
+            <path d="M7 12l3-3 2 2"/>
+        </svg>
+
+        <select id="userActivity">
+            <option value="low">Low — No exercise</option>
+            <option value="moderate">Moderate — Some regular exercise</option>
+            <option value="high">High — Frequent exercise</option>
+        </select>
+
+    </div>
+</div>
+        <div class="checkbox-group">
+    <label class="custom-checkbox">
+        <input type="checkbox" id="smoke">
+        <div class="checkbox-box">
+            <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<line x1="2" y1="12" x2="16" y2="12"/>
+<line x1="16" y1="12" x2="20" y2="12"/>
+<line x1="20" y1="10" x2="20" y2="14"/>
+<path d="M18 7c1 1 1 2 0 3"/>
+<path d="M21 6c1 1 1 3 0 4"/>
+</svg>
+
+            <span>I currently smoke</span>
+        </div>
+    </label>
+
+    <label class="custom-checkbox">
+        <input type="checkbox" id="diabetes">
+        <div class="checkbox-box">
+            <svg  class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M12 2C12 2 6 10 6 14a6 6 0 0 0 12 0c0-4-6-12-6-12z"/>
+</svg>
+            <span>I have diabetes</span>
+        </div>
+    </label>
+
+    <label class="custom-checkbox">
+        <input type="checkbox" id="family">
+        <div class="checkbox-box">
+            <svg  class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M20.8 4.6c-1.5-1.5-4-1.5-5.5 0L12 7.9 8.7 4.6c-1.5-1.5-4-1.5-5.5 0s-1.5 4 0 5.5L12 21l8.8-10.9c1.5-1.5 1.5-4 0-5.5z"/>
+</svg>
+            <span>Family history of heart disease</span>
+        </div>
+    </label>
+</div>
+                    <div class="form-btns-fixed">
+                       <button type="button" class="btn-prev" onclick="nextStep(2)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.5 12h-16m0 0l6.07 6.07M3.5 12l6.07-6.07" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Previous
+                        </button>
+                        <button type="button" class="btn-predict-risk" onclick="calculateRisk()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.62 20.81c-.34.12-.9.12-1.24 0C8.48 19.82 2 15.69 2 8.69 2 5.6 4.49 3.1 7.56 3.1c1.82 0 3.43.88 4.44 2.24a5.53 5.53 0 0 1 4.44-2.24C19.51 3.1 22 5.6 22 8.69c0 7-6.48 11.13-9.38 12.12z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Predict Risk
+                        </button>
+                    </div>
+                </div>
+                </form>
+
+          
+</div>
+    </section>
+    <a href="emergency.html" class="floating-emergency">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.95m-12.01 12.01a16 16 0 0 1-16-16A5 5 0 0 1 5 1c.67 0 1.31.12 1.9.34L10 6.01l-2.45 2.45a11.03 11.03 0 0 0 4.99 4.99L15 11l4.67 3.1c.22.59.34 1.23.34 1.9a5 5 0 0 1-5 5z"></path>
+    </svg>
+    <span>Emergency</span>
+</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
